@@ -21,8 +21,6 @@ end_time = 25                    #Stating time. Default 25. In 24 hour format
 flag_login = True
 user_bot_token = '7689424290:AAFQnJN0_393aKP1RCHeDCCLpQUkN1qneTk'  #Chegg notifier bot
 
-print(username)
-
 
 # Set up the Chrome WebDriver
 options = webdriver.ChromeOptions()
@@ -30,7 +28,8 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(options=options)
-print(driver)
+
 while flag_login:
    flag_login = login_to_chegg(username,password,driver)
+   
 refresh_chegg(driver,accept_option,start_time,end_time,user_bot_token,user_bot_chatID,account_name)
