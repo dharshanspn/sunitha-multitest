@@ -30,6 +30,6 @@ options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(options=options)
 
 while flag_login:
-   flag_login = login_to_chegg(username,password,driver)
+   flag_login = login_to_chegg(username,password,driver,account_name)
    
 refresh_chegg(driver,accept_option,start_time,end_time,user_bot_token,user_bot_chatID,account_name)
